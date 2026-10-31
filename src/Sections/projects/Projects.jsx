@@ -48,9 +48,9 @@ const Projects = () => {
   const canvasSectionRef = useRef(null);
 
   // Preload 3D JavaScript modules immediately
-  useEffect(() => {
-    loadProjectsCanvas();
-  }, []);
+  // useEffect(() => {
+  //   loadProjectsCanvas();
+  // }, []);
 
   // Render Canvas when Projects section approaches
   useEffect(() => {
