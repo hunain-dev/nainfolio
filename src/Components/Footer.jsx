@@ -13,6 +13,9 @@ const Footer = () => {
     { icon: <FaEnvelope />, Link: "mailto:huniiali1122@gmail.com" },
 
   ];
+
+
+  
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -32,7 +35,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div id="contact" className="min-h-full   lg:mt-19 mt-0 w-full">
+    <div id="contact" className="min-h-full    lg:mt-2 mt-0 w-full">
 
 
       <div className="h-full w-full  flex items-center overflow-hidden lg:text-[13vw] text-[18vw] ">

@@ -12,8 +12,9 @@ const TechStack = () => {
     { text: "Nextjs" },
     { text: "Gsap" },
     { text: "Locomotive" },
-    { text: "Matter js" },
-    { text: "Tailwind   " },
+    { text: "Tailwind" },
+    { text: "Threejs" },
+    { text: "R3F" },
   ];
 
   return (

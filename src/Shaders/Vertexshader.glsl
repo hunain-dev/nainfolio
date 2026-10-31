@@ -1,0 +1,18 @@
+uniform float uScrollSpeed;
+varying vec2 vUv;
+
+void main() {
+    vUv = uv;
+    vec3 pos = position;
+    
+   float normalizeY = pos.y * 2.0;
+   float curveFactor = 1.0 - normalizeY * normalizeY;
+
+   pos.x += uScrollSpeed * curveFactor * 0.6;
+
+    gl_Position = projectionMatrix
+        * modelViewMatrix
+        * vec4(pos, 1.0);
+}
+
+

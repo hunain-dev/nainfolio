@@ -4,12 +4,11 @@ import Ourservices from './Sections/services/OurServices'
 import Projects from './Sections/projects/Projects'
 import Aboutus from "./Sections/about/Aboutus"
 import Home from "./Sections/home/Home"
+import { Canvas } from '@react-three/fiber'
+import ProjectsShowcase from './Sections/projects/ProjectsShowcase'
 const App = () => {
   return (
     <div className='lg:pt-7 pt-6 w-full'>
-
-     
-
 
       {/*  front area*/}
 {/* Background / Grid */}
@@ -21,11 +20,12 @@ const App = () => {
 
 {/* Main Content */}
 <div className="relative z-10 w-full">
-  <Home />
+  
+   <Home />
   <Aboutus />
   <TechStack />
   <Ourservices />
-  <Projects />
+  <Projects /> 
 </div>
 
 
