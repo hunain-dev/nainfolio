@@ -1,12 +1,41 @@
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import glsl from "vite-plugin-glsl";
+import glsl from 'vite-plugin-glsl'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     glsl(),
     tailwindcss(),
-    react()],
+    react(),
+  ],
+
+  build: {
+    rollupOptions: {
+      output: {
+      manualChunks(id) {
+  if (id.includes('/node_modules/@react-three/drei/')) {
+    return 'drei'
+  }
+
+  if (id.includes('/node_modules/@react-three/fiber/')) {
+    return 'fiber'
+  }
+
+  if (id.includes('/node_modules/three/')) {
+    return 'three'
+  }
+
+  if (id.includes('/node_modules/gsap/')) {
+    return 'gsap'
+  }
+
+  if (id.includes('/node_modules/framer-motion/')) {
+    return 'framer-motion'
+  }
+}
+      },
+    },
+  },
 })
