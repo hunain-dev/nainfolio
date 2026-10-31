@@ -20,7 +20,7 @@ createRoot(document.getElementById("root")).render(
     <SmoothScrolling>
       <BrowserRouter>
         {/* <Mousemove/>   */}
-        <Loader />
+        {/* <Loader /> */}
         {/* <Chilli /> */}
         <Header />
         <App />

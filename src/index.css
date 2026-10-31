@@ -1,412 +1,166 @@
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+}
 
-*{
-    box-sizing: border-box;
-  }
-  
-  body,html{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    background-color: #F4F4F4;
-    
-    /* background-color: #EAE6DD; */
-  }
-  
-  .smooth-scroll {
+::selection {
+  background-color: #242627;
+  color: white;
+}
+
+
+body,
+html {
   scroll-behavior: smooth;
-  }
-
-   ::-webkit-scrollbar{
-    width: 0%;
-  } 
-
-  html {
+  overflow-x: hidden;
+  background-color: #f4f4f4;
     -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-  }
-  
+  text-size-adjust: none;
+
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0%;
+}
+
+/* html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+} */
+
 /*   
   ::-webkit-scrollbar {
     width: 100%;
     background-color: red;
   } */
-  
-  ::selection{
-    background-color:#242627;
-    color: white;
-  }
-  
-  @font-face {
-    font-family: 'Actay';
-    src: url('/assets/Fonts/Actay-Regular.woff')  format("woff"); 
-    font-display: swap;
-  
-  }
 
-  .actay{
+
+
+@font-face {
+  font-family: "Actay";
+  src: url("/assets/Fonts/Actay-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+.actay {
   font-family: "Actay", sans-serif;
-  
-  }
+}
+
+@font-face {
+  font-family: "Victory";
+  src: url(/assets/Fonts/Victory.ttf) format("woff");
+  font-display: swap;
+}
+
+.Victory {
+  font-family: "Victory";
+}
 
 
-  @font-face {
-    font-family:Victory ;
-    src: url(/assets/Fonts/Victory.ttf) format("woff");
-    font-display: swap;
 
-  }
+@font-face {
+  font-family: "Fontspring";
+  src: url("/assets/Fonts/Fontspring.ttf") format("woff");
+  font-display: swap;
+}
 
-  
-  .Victory{
-    font-family: "Victory";
-    }
+.Fontspring {
+  font-family: "Fontspring";
+}
 
-    @font-face {
-    font-family:amora ;
-    src: url(/assets/Fonts/amora.ttf) format("woff");
-    font-display: swap;
-    }
-  
-    .amora{
-      font-family: "amora";
-
-      }
-      
-    
-  @font-face {
-    font-family: 'Garelin';
-    src: url('/assets/Fonts/GarelinaBold-rgZ0p.ttf')  format("woff");
-    font-display: swap;
-  
-  }
-  
-  .Garelin{
-    font-family: 'Garelin';
-  
-  
-  }
-  
-  
-  
-  @font-face {
-    font-family: 'Fontspring' ;
-    src: url('/assets/Fonts/Fontspring.ttf')  format("woff");
-    font-display: swap;
-
-  }
-  
-  
-  .Fontspring{
-    font-family: 'Fontspring' ;
-  
-  
-  }
-  
-  @font-face {
-    font-family: 'ActayCondensed';
-    src: url('/assets/Fonts/ActayCondensed-ThinItalic.otf')  format("woff");
-    font-display: swap;
-
-   
-  }
-
-  html {
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-  }
-  .ActayCondensed{
-    font-family: 'ActayCondensed';
-  
-  
-  }
-  
-  @font-face {
-    font-family: 'Akrobat';
-    src: url('/public/assets/Fonts/Akrobat.ttf')  format("woff");
-    font-display: swap;
-   
-  }
-
-  .Akrobat{
-    font-family: 'Akrobat';
-  
-  }
-  
-  @font-face {
-    font-family: 'ppneuemontreal';
-    src: url('/public/assets//Fonts/ppneuemontreal-bold.otf')  format("woff");
-    font-display: swap;
-  }
-  
-  
-  .ppneuemontreal{
-    font-family: 'ppneuemontreal';
-  
-  
-  }
-  
-  
-  @font-face {
-    font-family: "Morganite";
-    src: url("/Assets/Fonts/Morganite-Black.woff") format("truetype");
-    font-display: swap;
-  }
+@font-face {
+  font-family: "ActayCondensed";
+  src: url("/assets/Fonts/ActayCondensed-ThinItalic.otf") format("woff");
+  font-display: swap;
+}
 
 
-  .Morganite {
-    font-family: "Morganite", sans-serif;
+.ActayCondensed {
+  font-family: "ActayCondensed";
+}
+
+@font-face {
+  font-family: "Akrobat";
+  src: url("/public/assets/Fonts/Akrobat.ttf") format("woff");
+  font-display: swap;
+}
+
+.Akrobat {
+  font-family: "Akrobat";
+}
+
+@font-face {
+  font-family: "ppneuemontreal";
+  src: url("/public/assets//Fonts/ppneuemontreal-bold.otf") format("woff");
+  font-display: swap;
+}
+
+.ppneuemontreal {
+  font-family: "ppneuemontreal";
+}
+
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/Assets/Fonts/Satoshi.ttf") format("woff");
+  font-display: swap;
+}
+
+.Satoshi {
+  font-family: "Satoshi";
+}
+
+@font-face {
+  font-family: "Impacted";
+  src: url("/Assets/Fonts/Impacted.ttf") format("truetype");
+}
+
+.Impacted {
+  font-family: "Impacted";
+}
+
+
+
+
+@font-face {
+  font-family: "Morganites";
+  src: url("/public/assets/Fonts/Morganites/Morganite-ExtraBold.ttf");
+  font-display: swap;
+}
+
+.Morganites {
+  font-family: "Morganites";
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Satoshis";
+  src: url("/public/assets/Fonts/Satoshi/Satoshi-Light.otf");
+  font-display: swap;
+}
+
+.Satoshis {
+  font-family: "Satoshis";
+}
+
+
+/* 
+@keyframes moveImage {
+  0% {
+    transform: translateY(0);
   }
-  
-  
-  @font-face {
-    font-family: 'Satoshi';
-    src: url('/Assets/Fonts/Satoshi.ttf')  format("woff");
-    font-display: swap;
+  50% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
  
-   
-  }
-  
-  .Satoshi{
-    font-family: 'Satoshi';
-  
-  
-  }
-  
-  @font-face {
-    font-family: 'Impacted';
-    src: url('/Assets/Fonts/Impacted.ttf') format("truetype");
-
-   
-  }
-  
-  
-  .Impacted{
-    font-family: 'Impacted';
-   
-  
-  
-  }
-  
-
-  
-  
-  @font-face {
-    font-family: 'MarvinVisions';
-    src: url('/public/Assets/Fonts/MarvinVisions-Bold.otf')  format("woff");
-    font-display: swap;
-   
-  }
-  
-  @font-face {
-    font-family: 'Quasar';
-    src: url('/public/Assets/Fonts/Quasar.otf') format("woff");
-    font-display: swap;
-   
-  }
-  @font-face {
-    font-family: 'sigana';
-    src: url('/public/Assets/Fonts/sigana-condensed.otf')  format("woff");
-    font-display: swap;
-   
-  }
-  @font-face {
-    font-family: 'impact';
-    src: url('/public/Assets/Fonts/impact.ttf')  format("woff");
-    font-display: swap;
-   
-  }
-  
-  @font-face {
-    font-family: 'Stadium';
-    src: url('/public/Assets/Fonts/Stadium.ttf')  format("woff");
-    font-display: swap;   
-  }
-  @font-face {
-    font-family: 'ThatAppeal';
-    src: url('/public/Assets/Fonts/ThatAppeal-FreeDemo-BF65b7880fefd18.otf')  format("woff");
-    font-display: swap;  
-  }
-  @font-face {
-    font-family: 'TypeMonster';
-    src: url('/public/Assets/Fonts/TypeMonster-FreeDemo-BF65d7910e35896.otf')  format("woff");
-    font-display: swap;   
-  }
-  
-  
-  
-  @font-face {
-    font-family: 'rejouice';
-    src: url('/public/Assets/Fonts/rejoucie.ttf')  format("woff");
-    font-display: swap;  
-  }
-  
-  @font-face {
-    font-family: 'gunplay';
-    src: url('/public/Assets/Fonts/gunplay.ttf')  format("woff");
-    font-display: swap;   
-  }
-  
-  
-  
-  
-  
-  
-  @font-face {
-    font-family: 'GeoplaceSC';
-    src: url('/public/Assets/Fonts/GeoplaceSC-Bold.ttf')  format("woff");
-    font-display: swap;   
-  }
-  
-  @font-face {
-    font-family: 'FaqroExtendedWideTrial';
-    src: url('/public/Assets/Fonts/FaqroExtendedWideTrial-Regular.ttf')  format("woff");
-    font-display: swap;  
-  }
-  
-  
-  /* @font-face {
-    font-family: 'Satoshi-black';
-    src: url('/public/Assets/Fonts/Satoshi-Black.otf')  format("woff");
-    font-display: swap;   
-  }
-  
-  .Satoshi-black{
-    font-family: 'Satoshi-black';
-  
-  } */
-
-
-  @font-face {
-    font-family: 'Queen';
-    src: url('/public/Assets/Fonts/Queen.ttf')  format("woff");
-    font-display: swap;  
-  }
-  
-  .Queen{
-    font-family: 'Queen';
-  
-  }
-  
-  
-  
-  @font-face {
-    font-family: 'playwrite';
-    src: url('/public/Assets/Fonts/plauwrite.ttf')  format("woff");
-    font-display: swap;   
-  }
-  
-
-
-
-
-
-
-
-  @font-face {
-    font-family: Morganites;
-    src: url('/public/assets/Fonts/Morganites/Morganite-ExtraBold.ttf');
-    font-display: swap;   
-
-  }
-
-  .Morganites{
-    font-family: Morganites;
-    font-weight: bold;
-  }
-
-  @font-face {
-    font-family:Satoshis ;
-    src: url('/public/assets/Fonts/Satoshi/Satoshi-Light.otf');
-    font-display: swap;   
-
-  }
-  
-  .Satoshis{
-    font-family: Satoshis;
-  }
-  @font-face {
-    font-family:impact ;
-    src: url('/public/assets/Fonts/impacted/impact.ttf');
-    font-display: swap;   
-
-  }
-  
-  .impact{
-    font-family: impact;
-  }
-
-  
-  
-  
-  @keyframes moveImage {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-2%); 
-    }
-    100% {
-      transform: translateY(0); 
-    }
-  }
-  
-
-/*   
-  .swiper {
-    width: 20vw;
-    height: 20vw;
-  } */
-
-
-  /* 📱 Mobile (0–640px) */
-/* @media (max-width: 640px) {
-  .swiper {
-    width: 60vw;
-    height: 45vh;
-  }
-} */
-
-/* for tablet responsive */
-
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  .swiper {
-    width: 45vw;
-    height: 60vh;
-  }
-} */
-
-
-/* for laptop and screeen */
-
-
-/* @media (min-width: 1024px) and (max-width: 1280px) {
-  .swiper {
-    
-    width: 22vw;
-    height: 33vw;
-  }
-} */
-
-/* 
-  .swiper-slide {
-    border-radius: 2vw;
-    backdrop-filter: blur(20px);
-    background: rgba(84, 82, 82, 0.171);
-    border-radius: 15px;
-  
-  } */
-/* 
-  .techskills{
-    transition: all 0.5s ease-in-out;
-  }
-   */
-
-
-
-
-
-
-
-
-   

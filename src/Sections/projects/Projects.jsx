@@ -10,11 +10,8 @@ import { Canvas } from "@react-three/fiber";
 const Projects = () => {
   // for responsive size for 3d card
   const isMobile = window.innerWidth < 768;
-const isTablet =
-  window.innerWidth >= 768 &&
-window.innerWidth < 1024;
+  const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
   // for responsive size for 3d card
-
 
   return (
     <div id="project" className="w-full mt-10 lg:mb-0  pb-10 ">
@@ -37,23 +34,15 @@ window.innerWidth < 1024;
 
       {/* <ProjectsShowcase/>/// */}
       <div className="md:h-150 lg:pb-10 2xl:h-screen pb-7 lg:mt-10 mt-10 md:mt-10 md:pb-10 flex items-center jusitfy-center w-full ">
-        <Canvas
-         camera={{
-  position: isMobile
-    ? [0, 0, 9]
-    : isTablet
-      ? [0, 0, 9]
-      : [0, 0, 9],
-
-  fov: isMobile
-    ? 25
-    : isTablet
-      ? 25
-      : 40,
-}}
-        >
-          <ProjectsShowcase />
-        </Canvas>
+   <Canvas
+  dpr={[1, 1.5]}
+  camera={{
+    position: [0, 0, 9],
+    fov: isMobile ? 25 : isTablet ? 25 : 40,
+  }}
+>
+  <ProjectsShowcase />
+</Canvas>
       </div>
 
       <MoreProofsSection />
@@ -62,7 +51,7 @@ window.innerWidth < 1024;
       <Awards />
       <Githubstatic />
     </div>
-  );  
+  );
 };
 
 export default Projects;

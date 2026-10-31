@@ -138,7 +138,7 @@ const ProjectsShowcase = () => {
     video.loop = true;
     video.muted = true;
     video.playsInline = true;
-    video.preload = "auto";
+    video.preload = "none";
 
     const texture = new THREE.VideoTexture(video);
     texture.colorSpace = THREE.SRGBColorSpace;
