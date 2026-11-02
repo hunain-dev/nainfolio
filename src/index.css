@@ -15,13 +15,9 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: #f4f4f4;
-    -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   text-size-adjust: none;
 
-}
-
-.smooth-scroll {
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

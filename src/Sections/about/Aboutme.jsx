@@ -29,63 +29,58 @@ const Aboutme = () => {
         y: -30,
       });
 
-  // Mobile
-mm.add("(max-width: 767px)", () => {
-  tl.to(
-    subtitleRef.current,
-    {
-      scale: 0.8,
-      y: -70,
-      ease: "power2.out",
-    },
-    0,
-  );
-});
+      // Mobile
+      mm.add("(max-width: 767px)", () => {
+        tl.to(
+          subtitleRef.current,
+          {
+            scale: 0.8,
+            y: -70,
+            ease: "power2.out",
+          },
+          0,
+        );
+      });
 
-// Tablet
-mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
-  tl.to(
-    subtitleRef.current,
-    {
-      scale: 1,
-      y: -93,
-      ease: "power2.out",
+      // Tablet
+      mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
+        tl.to(
+          subtitleRef.current,
+          {
+            scale: 1,
+            y: -93,
+            ease: "power2.out",
+          },
+          0,
+        );
+      });
 
-    },
-    0,
-  );
-});
+      // Desktop
+      mm.add("(min-width: 1024px) and (max-width: 1439px)", () => {
+        tl.to(
+          subtitleRef.current,
+          {
+            scale: 0.5,
+            y: -141,
+            ease: "power2.out",
+          },
+          0,
+        );
+      });
 
-// Desktop
-mm.add("(min-width: 1024px) and (max-width: 1439px)", () => {
-  tl.to(
-    subtitleRef.current,
-    {
-      scale: 0.5,
-      y: -141,
-      ease: "power2.out",
-
-    },
-    0,
-  );
-});
-
-// Large Desktop
-mm.add("(min-width: 1440px)", () => {
-  tl.to(
-    subtitleRef.current,
-    {
-      scale: 0.4,
-      y: -135,
-      ease: "power2.out",
-      backgroundColor:"orange",
-
-
-    },
-    0,
-  );
-});
-
+      // Large Desktop
+      mm.add("(min-width: 1440px)", () => {
+        tl.to(
+          subtitleRef.current,
+          {
+            scale: 0.4,
+            y: -135,
+            ease: "power2.out",
+            backgroundColor: "orange",
+          },
+          0,
+        );
+      });
 
       tl.to(
         paraRef.current,
@@ -101,10 +96,7 @@ mm.add("(min-width: 1440px)", () => {
     return () => ctx.revert();
   }, []);
   return (
-    <div
-      ref={sectionRef}
-      className="lg:pb-6 xl:pb-24 pb-20 text-white w-full"
-    >
+    <div ref={sectionRef} className="lg:pb-6 xl:pb-24 pb-20 text-white w-full">
       <div className="h-full w-full">
         <div className="relative flex items-center justify-center flex-col w-full  ">
           <h2

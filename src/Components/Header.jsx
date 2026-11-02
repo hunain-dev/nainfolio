@@ -5,6 +5,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import gsap from "gsap";
 import { motion } from "framer-motion";
+import { locoRef } from "../hooks/SmoothScrolling";
 
 const Header = () => {
   const [MEnuoepn, setMEnuoepn] = useState(false);
@@ -122,12 +123,19 @@ const Header = () => {
     },
   ];
 
+  // for smooth scrolling to section
+  const scrollToSection = (href) => {
+    locoRef.current?.scrollTo(href, {
+    duration: 5,
+    offset: -80,
+    });
+  };
+
   return (
     <div className=" lg:px-0 px-2 w-full  lg:py-3 py-3  flex-col items-center gap-1 justify-center top-0 left-1/2 -translate-x-1/2 flex fixed z-999">
       {/* We keep the menu in the DOM always, but handle visibility with GSAP */}
 
-
-{/* main menu */}
+      {/* main menu */}
       <div className="actay p-1  cursor-pointer lg:w-sm md:w-md 2xl:w-md w-full   rounded-1xl lg:px-3 px-2  overflow-hidden   bg-[#201D1D] grid grid-cols-2">
         <div className=" h-full flex items-center  justify-start gap-1 text-white">
           <div
@@ -142,7 +150,7 @@ const Header = () => {
               <VscMenu className="lg:text-[1.5vw] text-1xl md:text-2xl -mt-1  " />
             )}
           </div>
-          <h2 className=" lg:text-[1.1vw] text-1xl md:text-2xl">Menu</h2>
+          <h2 className="lg:text-[1.1vw] text-1xl md:text-2xl">Menu</h2>
         </div>
         <a
           href="#contact"
@@ -154,17 +162,15 @@ const Header = () => {
         </a>
       </div>
 
-{/* main menu */}
-
-
+      {/* main menu */}
 
       {/* offer anything say something client */}
 
       <div className="relative w-fit overflow-hidden  lg:opacity-100 opacity-0 bg-[#A0FD62]">
         {/* Width determine karne ke liye sirf 3 items */}
-        <div className="flex  invisible">
+        <div className="flex invisible">
           {textobj.slice(0, 3).map((elem, index) => (
-            <h2 key={index} className="text-sm shrink-0">
+            <h2 key={index} className="actay text-sm">
               {elem.text}
             </h2>
           ))}
@@ -188,11 +194,7 @@ const Header = () => {
         </motion.div>
       </div>
 
-
       {/* offer anything say something client */}
-
-
-
 
       {/* menu bar open */}
 
@@ -207,8 +209,15 @@ const Header = () => {
                 key={index}
                 className="menu-item actay flex items-center justify-center w-full px-3"
               >
-                <button className="bg-[#BBFD6A] tracking-tight w-full lg:py-3 py-2 rounded-[1vw] font-bold uppercase lg:text-[1vw] text-[3vw] md:text-2xl">
-                  <Textanimation text={elem.text} href={elem.href} />
+                <button
+                  onClick={() => scrollToSection(elem.href)}
+                  className="bg-[#BBFD6A] flex items-center justify-center  w-full lg:py-3 py-2 rounded-[1vw]  actay"
+                >
+                  <Textanimation
+                    text={elem.text}
+                    href={elem.href}
+                    classname="actay lg:text-[1.2vw] xl:text-1xl md:text-3xl 2xl:text-md sm:text-md text-center"
+                  />
                 </button>
               </div>
             );
@@ -224,7 +233,7 @@ const Header = () => {
               alt=""
             />
           </div>
-          <div className="h-fit w-full   mt-3  flex items-center justify-center gap-1">
+          <div className="h-fit w-full mt-3 flex items-center justify-center gap-1">
             <Textanimation
               text="Resume"
               classname="actay lg:text-[1.3vw] xl:text-1xl md:text-3xl 2xl:text-md text-center"
@@ -235,10 +244,7 @@ const Header = () => {
         </div>
       </div>
 
-
       {/* menu bar open */}
-
-
     </div>
   );
 };
